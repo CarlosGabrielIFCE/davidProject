@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Simple Calculator</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">First Number</ion-label>
+      <ion-input type="number" [(ngModel)]="firstNumber"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Second Number</ion-label>
+      <ion-input type="number" [(ngModel)]="secondNumber"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        Result: <span class="result">{{ result }}</span>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button full (click)="add()">+</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button full (click)="sub()">-</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button full (click)="mult()">x</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button full (click)="div()">/</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
